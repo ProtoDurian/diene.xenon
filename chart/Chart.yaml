@@ -7,6 +7,6 @@ appVersion: '0.8.1'
 dependencies:
   - name: metrics-server
     alias: upstream
-    version: 3.13.1
+    version: 3.14.0
     repository: https://kubernetes-sigs.github.io/metrics-server
     condition: upstream.enabled
