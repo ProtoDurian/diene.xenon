@@ -12,7 +12,7 @@ jobs:
       - nscloud-cache-tag-nix-store-cache-ubuntu-26.04-amd64
     timeout-minutes: 30
     steps:
-      - uses: AtomiCloud/actions.setup-nix@v3
+      - uses: AtomiCloud/actions.setup-nix@v4
       - name: Run the unit tier
         run: nix develop .#ci -c ./scripts/ci/xenon.sh
 
@@ -24,6 +24,6 @@ jobs:
       - nscloud-cache-tag-nix-store-cache-ubuntu-26.04-amd64
     timeout-minutes: 30
     steps:
-      - uses: AtomiCloud/actions.setup-nix@v3
+      - uses: AtomiCloud/actions.setup-nix@v4
       - name: Install on canary-xenon (k3d, no bundled metrics-server), kubectl top answers
         run: nix develop .#ci -c ./scripts/ci/xenon-k3d.sh
